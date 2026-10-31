@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-30T16:40:00.966299+00:00",
+  "title": "Design System: CARDROOM",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "hero-type",
+        "value": "0 2px 0 #aa1621",
+        "purpose": "Hard shadow on red campaign headline."
+      }
+    ],
+    "motion": [
+      {
+        "name": "product-hover",
+        "value": "transform .2s",
+        "purpose": "Product art scales to 1.035 on hover."
+      },
+      {
+        "name": "toast",
+        "value": ".2s",
+        "purpose": "Toast opacity and vertical movement."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "transition:none!important;scroll-behavior:auto",
+        "purpose": "Respect reduced motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "narrow",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Full-width basket action.",
+      "html": "<button class=\"ds-primary\">계속 쇼핑하기 →</button>",
+      "css": ".ds-primary{background:#ed3234;color:#fff;padding:15px 18px;width:100%;border:0;font:650 13px Pretendard,sans-serif;cursor:pointer}.ds-primary:focus-visible{outline:3px solid #2367dc;outline-offset:4px}"
+    },
+    {
+      "name": "Campaign action",
+      "kind": "button",
+      "refersTo": "button-campaign",
+      "description": "Compact white action within the red campaign.",
+      "html": "<button class=\"ds-campaign\">원피스 카드 보러가기 →</button>",
+      "css": ".ds-campaign{background:#fff;color:#191b24;padding:10px 13px;border:0;border-radius:2px;font:700 12px Pretendard,sans-serif;cursor:pointer}.ds-campaign:focus-visible{outline:3px solid #2367dc;outline-offset:4px}"
+    },
+    {
+      "name": "Search",
+      "kind": "input",
+      "refersTo": "search",
+      "description": "Red outlined storefront search.",
+      "html": "<label class=\"ds-search\"><input type=\"search\" aria-label=\"상품 검색\" placeholder=\"카드명, 시리즈명, 카드 번호를 검색하세요\"></label>",
+      "css": ".ds-search{display:flex;border:2px solid #ed3234;border-radius:5px;padding:0 13px}.ds-search input{width:100%;height:43px;border:0;background:none;font:13px Pretendard,sans-serif}.ds-search input:focus-visible{outline:3px solid #2367dc;outline-offset:4px}"
+    },
+    {
+      "name": "Product tabs",
+      "kind": "nav",
+      "description": "Red active underline and compact gray alternatives.",
+      "html": "<nav class=\"ds-tabs\"><button class=\"ds-active\">전체</button><button>포켓몬 카드</button><button>원피스 카드</button></nav>",
+      "css": ".ds-tabs{display:flex;gap:25px;border-bottom:1px solid #ddd}.ds-tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:0 0 12px;color:#777;font:12px Pretendard,sans-serif;cursor:pointer}.ds-tabs .ds-active{color:#ed3234;border-color:#ed3234;font-weight:750}.ds-tabs button:focus-visible{outline:3px solid #2367dc;outline-offset:4px}"
+    },
+    {
+      "name": "Condition badge",
+      "kind": "chip",
+      "description": "Small dark product condition label.",
+      "html": "<span class=\"ds-badge\">SINGLE</span>",
+      "css": ".ds-badge{display:inline-block;background:#222a3b;color:#fff;font:8px Pretendard,sans-serif;padding:4px 6px;letter-spacing:.02em}"
+    },
+    {
+      "name": "Product card",
+      "kind": "card",
+      "description": "Flat product well with dense commerce details.",
+      "html": "<article class=\"ds-product\"><div class=\"ds-well\"><span class=\"ds-condition\">SINGLE</span><svg viewBox=\"0 0 80 110\" width=\"100\" aria-label=\"카드 이미지 영역\"><rect x=\"2\" y=\"2\" width=\"76\" height=\"106\" rx=\"3\" fill=\"#e1edff\" stroke=\"#ddd\"/><path d=\"M20 55h40M40 35v40\" stroke=\"#777\"/></svg><button class=\"ds-add\" aria-label=\"장바구니 담기\">+</button></div><p class=\"ds-meta\">포켓몬 카드 게임</p><h3>피카츄 ex</h3><strong>28,000원</strong></article>",
+      "css": ".ds-product{max-width:190px;font-family:Pretendard,sans-serif;color:#17191e}.ds-well{height:224px;background:#f5f5f7;position:relative;display:grid;place-items:center}.ds-well svg{transition:transform .2s}.ds-product:hover svg{transform:scale(1.035)}.ds-condition{position:absolute;left:0;top:0;background:#222a3b;color:#fff;font-size:8px;padding:4px 6px}.ds-add{position:absolute;right:8px;bottom:8px;width:25px;height:25px;background:#fff;border:1px solid #ddd;border-radius:3px;cursor:pointer}.ds-add:hover{background:#ffdf39}.ds-add:focus-visible{outline:3px solid #2367dc;outline-offset:4px}.ds-meta{font-size:9px;color:#777;margin:13px 0 7px}.ds-product h3{font-size:13px;font-weight:650;line-height:1.4;margin:0 0 11px}.ds-product strong{font-size:16px;font-weight:800;letter-spacing:-.02em}@media(prefers-reduced-motion:reduce){.ds-well svg{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "overview": "Compact Korean commerce, flat white surfaces, and expressive red manga and yellow Pokémon campaigns. The user rejected muted generic styling and requested graphics and flashy elements.",
+    "keyCharacteristics": [
+      "Vivid franchise artwork",
+      "Dense readable merchandise grid",
+      "Red shopping emphasis",
+      "Square flat surfaces"
+    ],
+    "rules": [
+      {
+        "name": "Flat commerce",
+        "body": "Separate product wells using tone and spacing; do not add floating shadows.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use official artwork and bold cropped campaign compositions.",
+      "Do preserve the six/three/two-column responsive product grid."
+    ],
+    "donts": [
+      "Do not replace vivid campaigns with muted generic gradients.",
+      "Do not round every panel or obscure copy with artwork."
+    ]
+  }
+}
